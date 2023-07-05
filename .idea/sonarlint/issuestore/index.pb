@@ -1,0 +1,19 @@
+
+O
+src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
+`
+0src/main/java/org/example/BinanceWebDriving.java,6\a\6a637e5fe85e971f9ff8b746d07bc99d27d3d65d
+\
+,src/main/java/org/example/CROWebDriving.java,8\d\8da5745d6a80471011d56ea51daf28ed21c94d5a
+S
+#src/main/java/org/example/Main.java,0\b\0ba1b9c7a4878802f938e331cc2d8a042087ec6b
+]
+-src/main/webapp/WEB-INF/views/js/showTable.js,3\2\328bd460ddec5053cd4e6164f3183dd0e53d965b
+W
+'src/main/java/org/example/Executer.java,7\6\76afea52b8d880ed1c064f340a664202ac772d99
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+j
+:src/main/java/org/example/controllers/IndexController.java,5\9\59cf339b20aa6689b6ad22b90953698d7ba792bf
+W
+'src/main/webapp/WEB-INF/views/index.jsp,3\0\305b3bb8194d08e1e32b17ac5f1d53c1cf0118c1
