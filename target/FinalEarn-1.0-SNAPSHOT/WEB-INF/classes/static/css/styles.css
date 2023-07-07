@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0c1818;
+  color: white;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.rectangle {
+  width: 100%;
+  height: 100px;
+  color: #faf4d2 ;
+  text-align: center;
+  line-height: 100px;
+  font-size: 30px;
+}
+
+.info-icon {
+  position: relative;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  background-color: #0c1818;
+  color: #faf4d2;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.info-icon:hover .tooltip {
+  visibility: visible;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.input-container input,
+#durList {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  background-color: #faf4d2;
+  color: #004743;
+}
+
+#durList {
+  width: 200px;
+  overflow-y: scroll;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.crypto-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-left: 350px;
+  margin-right: 350px;
+  font-size: 20px;
+  color: #faf4d2;
+}
+
+.crypto-name {
+  order: 1;
+}
+
+.crypto-value {
+  order: 2;
+}
+
+.crypto-amount {
+  order: 0;
+}
+
+table {
+  width: 50%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th {
+  width: 10%;
+  padding: 20px;
+  border: 1px solid #faf4d2;
+  font-size: 20px;
+  background-color: #004743;
+  color: #faf4d2;
+  text-align: left;
+}
+
+td {
+  padding: 20px;
+  border: 1px solid #faf4d2;
+  font-size: 20px;
+  color: #faf4d2;
+}
+
+/* Hover effect */
+tr:hover {
+  background-color: #004743;
+}
