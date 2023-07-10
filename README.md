@@ -1,10 +1,4 @@
-Earnalyzer is a webapp that compares Binance and CRO earnings
----
-title: Earnalyzer
-slug: LM5u-ea
-createdAt: 2023-06-28T09:39:04.936Z
-updatedAt: 2023-06-28T11:12:16.928Z
----
+#Earnalyzer
 
 # Documentation
 
