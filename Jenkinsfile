@@ -12,7 +12,7 @@ pipeline {
                 git 'https://github.com/Sepay/Earnalyzer.git'
 
                 // Build your Maven project
-                sh 'mvn clean package'
+                sh 'mvn clean install'
             }
         }
 
