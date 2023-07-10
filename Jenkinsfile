@@ -12,7 +12,7 @@ pipeline {
                 git 'https://github.com/Sepay/Earnalyzer.git'
 
                 // Build your Maven project
-                sh 'mvn clean install'
+                sh 'mvn spring-boot:run'
             }
         }
 
