@@ -63,6 +63,20 @@
                     <target>20</target>
                 </configuration>
             </plugin>
+
+            <!-- Maven War Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>org.example.MainClass</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -71,4 +85,3 @@
         </plugins>
     </build>
 </project>
-

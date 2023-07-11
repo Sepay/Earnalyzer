@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'Maven 3.6.2'
-    }
-
     stages {
         stage('Build') {
             steps {
@@ -12,14 +8,14 @@ pipeline {
                 git 'https://github.com/Sepay/Earnalyzer.git'
 
                 // Build your Maven project
-                sh 'mvn clean package'
+                sh 'mvn spring-boot:run'
             }
         }
 
         stage('Deploy') {
             steps {
-                // Run the Spring Boot application
-                sh 'mvn spring-boot:run'
+                // Deploy your application to Tomcat
+                sh 'cp target/FinalEarn.war'
             }
         }
     }
