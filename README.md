@@ -38,7 +38,7 @@ Remember to update the information if, in the future, similar software becomes a
 
 This web applications needs 4 different inputs:
 
-1.  Amount- The first input is the money that the user wants do invest.
+1.  Amount - The amount that the user wants to invest.
 
 2.  Crypto - Type of crypto (e.g. ADA or Cardano).
 
