@@ -7,6 +7,6 @@ echo Waiting for the application to start...
 timeout /t 10 >nul
 
 echo Opening the default browser...
-start "" http://localhost:8080 >nul
+start "" http://localhost:8090 >nul
 
 exit

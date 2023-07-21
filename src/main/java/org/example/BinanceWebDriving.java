@@ -41,8 +41,6 @@ public class BinanceWebDriving {
 
         Thread.sleep(1500);
 
-        System.out.println("submit successfull");
-
 
 
         List<WebElement> elements = driver.findElements(By.className("css-16rhyii"));
@@ -125,7 +123,6 @@ public class BinanceWebDriving {
             // Print the elements containing the "%" symbol
             for (WebElement element : elementsWithPercentage) {
                 String text = element.getText();
-                System.out.println(text);
                 if (text.length() > 0) {
                     String[] Calculators = Calculator.calculations(text, amountValue, cryptoName);
                     String ganhoAnual = Calculators[0];

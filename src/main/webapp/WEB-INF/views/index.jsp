@@ -9,11 +9,11 @@
 <img src="https://image.freepik.com/free-vector/elegant-dark-background-with-golden-details_52683-33648.jpg" class="background-image">
 
 <div class="rectangle">
-    Earn % Compare
+    <img src="css/images/Logo.png" style="width: 400px;height: 80px; margin-top: 10px;">
 </div>
 <div class="input-container">
     <form action="/compare" method="post">
-        <input type="text" name="amount" placeholder="Enter amount" />
+        <input type="text" name="amount" id="durList" placeholder="Enter amount in $" />
         <select id="durList" name="crypto">
           <option value="BTC">Bitcoin</option>
           <option value="ETH">Ethereum</option>
@@ -52,42 +52,43 @@
           <span class="tooltip">CRO Lockup:<br>Less - Less than 4000<br>Normal - 4000 to 40000<br>More - 40000 or more</span>
           i
         </div>
-        <input type="submit" id= "#compare" name="compare" value="Compare" />
+        <input type="submit" id= "#compare" name="compare" value="Compare"  />
     </form>
 </div>
-<div class="crypto-info">
-    <span class="crypto-name">Crypto: ${crypto}</span>
-    <span class="crypto-value">Value: ${mValue}</span>
-    <span class="crypto-amount">Amount: ${amount}</span>
-</div>
+    <div class="crypto-info ${showElements ? 'visible' : 'hidden'}">
+        <span class="crypto-name">Crypto: ${crypto}</span>
+        <span class="crypto-value">Value: ${mValue}</span>
+        <span class="crypto-amount">Amount: ${amount}</span>
+    </div>
 
-<div class="table-container">
-    <table id="myTable">
-        <tr>
-            <th id="cellId"> </th>
-            <th>Binance</th>
-            <th>CRO</th>
-        </tr>
-        <tr>
-            <th>APR</th>
-            <td>${APRBinance}</td>
-            <td>${APRCRO}</td>
-        </tr>
-        <tr>
-            <th>Annual Value($)</th>
-            <td>${anualBinance}</td>
-            <td>${AnualCRO}</td>
-        </tr>
-        <tr>
-            <th>Annual Value(Crypto)</th>
-            <td>${anualCryptoB}</td>
-            <td>${anualCryptoCRO}</td>
-        </tr>
-        <tr>
-            <th>Weekly Value($)</th>
-            <td>${semanalBinance}</td>
-            <td>${SemanalCRO}</td>
-        </tr>
-    </table>
+    <div class="table-container ${showElements ? 'visibleTable' : 'hidden'}">
+        <table id="myTable">
+            <tr>
+                <th id="cellId"> </th>
+                <th>Binance</th>
+                <th>CRO</th>
+            </tr>
+            <tr>
+                <th>APR</th>
+                <td>${APRBinance}</td>
+                <td>${APRCRO}</td>
+            </tr>
+            <tr>
+                <th>Annual Value($)</th>
+                <td>${anualBinance}</td>
+                <td>${AnualCRO}</td>
+            </tr>
+            <tr>
+                <th>Annual Value(Crypto)</th>
+                <td>${anualCryptoB}</td>
+                <td>${anualCryptoCRO}</td>
+            </tr>
+            <tr>
+                <th>Weekly Value($)</th>
+                <td>${semanalBinance}</td>
+                <td>${SemanalCRO}</td>
+            </tr>
+        </table>
+        </div>
 </body>
 </html>

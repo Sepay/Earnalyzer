@@ -45,7 +45,8 @@ public class CROWebDriving {
         Thread.sleep(1000);
         WebElement cryptoButton = driver.findElement(By.className("css-1u0sann"));
         cryptoButton.click();
-        WebElement amount = driver.findElement(By.className("css-105r9ql"));
+        Thread.sleep(500);
+        WebElement amount = driver.findElement(By.xpath("//*[@id=\"calculator\"]/div/div[1]/div/div[2]/div[2]/div/div[2]/div/input"));
         amount.click();
         amount.clear();
         amount.sendKeys(amountValue);
@@ -56,10 +57,9 @@ public class CROWebDriving {
         Thread.sleep(1500);
 
         List<WebElement> durations = driver.findElements(By.className("css-17k7ina"));
-        System.out.println(duration);
         if (duration.contains("1")) {
             for (WebElement e : durations){
-                if (e.getText().equals("1 Month")) {
+                if (e.getText().contains("1")) {
                     e.click();
                     break;
                 }
@@ -67,7 +67,15 @@ public class CROWebDriving {
         }
         else if (duration.contains("Flex")) {
             for (WebElement e : durations){
-                if (e.getText().equals("Flexible")) {
+                if (e.getText().contains("Flex")) {
+                    e.click();
+                    break;
+                }
+            }
+        }
+        else{
+            for (WebElement e : durations){
+                if (e.getText().contains("3")) {
                     e.click();
                     break;
                 }
@@ -76,16 +84,13 @@ public class CROWebDriving {
 
         Thread.sleep(1500);
 
-        List<WebElement> lockUP = driver.findElements(By.className("css-1cixw2d"));
-        for (WebElement e: lockUP) {
-            if (lock.equals("Normal")) {
-
-            } else {
-
-                if (e.getText().contains(lock)) {
-                    e.click();
-                }
-            }
+        if (lock.contains("Less")){
+            WebElement lockUpLess = driver.findElement(By.xpath("//*[@id=\"calculator\"]/div/div[1]/div/div[2]/div[4]/div/div[2]/button[1]/h5"));
+            lockUpLess.click();
+        }
+        if (lock.contains("More")){
+            WebElement lockUpMore = driver.findElement(By.xpath("//*[@id=\"calculator\"]/div/div[1]/div/div[2]/div[4]/div/div[2]/button[3]/h5"));
+            lockUpMore.click();
         }
         
         Thread.sleep(1500);
@@ -99,7 +104,6 @@ public class CROWebDriving {
 
         Thread.sleep(1500);
         String text = (String) js.executeScript("return arguments[0].textContent;", element);
-        System.out.println(text);
         String[] Calculators = Calculator.calculations(text, amountValue, cryptoName);
         String ganhoAnual = Calculators[0];
         String weekly = Calculators[1];

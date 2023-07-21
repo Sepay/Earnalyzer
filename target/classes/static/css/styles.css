@@ -43,6 +43,8 @@ body {
   display: flex;
   justify-content: center;
   margin: 20px;
+  border-radius: 20px;
+  color: #004743;
 }
 
 .input-container input,
@@ -52,18 +54,12 @@ body {
   font-size: 16px;
   margin-right: 10px;
   background-color: #faf4d2;
-  color: #004743;
+  border-radius: 20px;
 }
 
 #durList {
   width: 200px;
   overflow-y: scroll;
-}
-
-.table-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 100px;
 }
 
 .background-image {
@@ -72,19 +68,11 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.2;
+  opacity: 0.5;
   z-index: -1;
 }
 
-.crypto-info {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 40px;
-  margin-left: 350px;
-  margin-right: 350px;
-  font-size: 20px;
-  color: #faf4d2;
-}
+
 
 .crypto-name {
   order: 1;
@@ -100,23 +88,25 @@ body {
 
 table {
   width: 50%;
-  border-collapse: collapse;
+  border: 1px solid #faf4d2;
   text-align: left;
+  border-radius: 10px;
 }
 
 th {
   width: 10%;
   padding: 20px;
-  border: 1px solid #faf4d2;
   font-size: 20px;
+  border: 0.5px solid #faf4d2;
   background-color: #004743;
   color: #faf4d2;
   text-align: left;
+
 }
 
 td {
   padding: 20px;
-  border: 1px solid #faf4d2;
+  border: 0.5px solid #faf4d2;
   font-size: 20px;
   color: #faf4d2;
 }
@@ -124,4 +114,24 @@ td {
 /* Hover effect */
 tr:hover {
   background-color: #004743;
+}
+
+.visible {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-left: 350px;
+  margin-right: 350px;
+  margin-bottom: 40px;
+  font-size: 20px;
+  color: #faf4d2;
+}
+.visibleTable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.hidden {
+  display: none;
 }
